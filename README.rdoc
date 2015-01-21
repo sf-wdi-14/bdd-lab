@@ -1,28 +1,22 @@
-== README
+#BDD Lab
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Starting Point
+* You are provided you with a new rails app containing a `welcome#index` & `welcome#about`
+* The TDD portion, aka the controller & routing specs, have already been written for you
 
-Things you may want to cover:
+##Objectives
 
-* Ruby version
+Impliment BDD with two tests:
 
-* System dependencies
+1) Assert that the `welcome/index` view displays a "Hello World" message in an `<h1>`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+2) Assert that when we click an `<a>` tag containing the message `see about` on `welcome#index` we are redirected to `welcome#about` and on the `welcome/about` view we see a `<ul>` with the class `.about` listing `<li>`s each containing an interesting fact about yourself
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Process
+
+* Add `Capybara`
+* Create a folder in `/spec` called `features`
+* In `spec/features` create a file named `welcome_feature_spec.rb` containing your tests
+* Run the tests ensuring they first fail
+* Finally, write the code to make them pass!
